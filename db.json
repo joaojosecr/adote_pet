@@ -1,0 +1,108 @@
+{
+    "pets":[
+        
+        {
+            "user_id": "0",
+            "id": "0",
+            "nome": "Petit",
+            "raca": "Pinscher",
+            "data": "15/02/2010",
+            "genero": "macho",
+            "vacinado": "sim",
+            "peso": "5",
+            "descricao": "descricao do animal",
+            "foto": "img/pets/Petit"
+        },
+        {
+            "user_id": "0",
+            "id": "1",
+            "nome": "Maia",
+            "raca": "Pastor-alemão",
+            "data": "10/08/2015",
+            "genero": "femea",
+            "vacinado": "sim",
+            "peso": "25",
+            "descricao": "descricao do animal",
+            "foto": "img/pets/Maia" 
+        },
+        {
+            "user_id": "0",
+            "id": "2",
+            "nome": "Filo",
+            "raca": "Vira-lata",
+            "data": "01/05/2021",
+            "genero": "femea",
+            "vacinado": "sim",
+            "peso": "20",
+            "descricao": "descricao do animal",
+            "foto": "img/pets/Filo" 
+        },
+        {
+            "user_id": "0",
+            "id": "3",
+            "nome": "Thor",
+            "raca": "Pastor-alemão",
+            "data": "07/03/2018",
+            "genero": "macho",
+            "vacinado": "sim",
+            "peso": "30",
+            "descricao": "descricao do animal",
+            "foto": "img/pets/Thor" 
+        },
+        {
+            "user_id": "0",
+            "id": "4",
+            "nome": "Lola",
+            "raca": "Maltes",
+            "data": "01/08/2020",
+            "genero": "femea",
+            "vacinado": "sim",
+            "peso": "5",
+            "descricao": "descricao do animal",
+            "foto": "img/pets/Lola" 
+        },
+        {
+            "user_id": "0",
+            "id": "5",
+            "nome": "Scott",
+            "raca": "Yorkshire",
+            "data": "04/10/2019",
+            "genero": "macho",
+            "vacinado": "sim",
+            "peso": "5",
+            "descricao": "descricao do animal",
+            "foto": "img/pets/Scott" 
+        },
+        {
+            "user_id": "0",
+            "id": "6",
+            "nome": "Madonna",
+            "raca": "Pitbull",
+            "data": "02/04/2018",
+            "genero": "femea",
+            "vacinado": "sim",
+            "peso": "25",
+            "descricao": "descricao do animal",
+            "foto": "img/pets/Madonna" 
+        },
+        {
+            "user_id": "0",
+            "id": "7",
+            "nome": "Maggie",
+            "raca": "Bordercollie",
+            "data": "07/01/2023",
+            "genero": "femea",
+            "vacinado": "sim",
+            "peso": "15",
+            "descricao": "descricao do animal",
+            "foto": "img/pets/Maggie" 
+        }
+        
+        
+    ],
+
+    "user": [
+        
+    ]
+
+}
