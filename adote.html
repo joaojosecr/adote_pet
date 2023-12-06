@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adote um pet</title>
     
-    <script defer src="js_joaojose.js"></script>
+    <script defer src="app.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style_joaojose.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body >
     <!-- menu de navegação-->
-    <header>
+    <header >
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.html"><img src="img/bege.png" height="50px"></a>
@@ -19,24 +19,31 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Adote</a>
+                            <a class="nav-link" href="adote.html">Adote</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Doe</a>
+                            <div class="dropdown">
+                                <a class="dropdown-item" href="doe.html">Doe</a>
+                                <a class="dropdown-item" href="meu_doe.html">Minhas doações</a>
+                            </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Parceiros</a>
+                            <a class="nav-link" href="parceiros.html">Parceiros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre Nós</a>
+                            <a class="nav-link" href="sobre_nos.html">Sobre Nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
+                            <a class="nav-link" href="contato.html">Contato</a>
                         </li>
                     </ul>
                 </div>
                 <img  src="img/user.jpg" id="perfil">
-                <a class="navbar-brand ps-3" href="#">Login</a>
+                <a class="navbar-brand ps-3" href="login.html" id="nome_login" >Login</a>
+                <div id="sair_login"></div>
+                
+                
             </div>
         </nav>
     </header>
@@ -128,7 +135,9 @@
     <script>
         
     document.body.onload = () => {
+        nome_login();
         exibePets();
+
     }
     </script>
 

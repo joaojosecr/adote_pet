@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adote um pet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles_cadastro.css">
+    <script src="app.js" defer></script>
+</head>
+<body onload="nome_login()">
+    <header >
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="img/bege.png" height="50px"></a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="adote.html">Adote</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Doe</a>
+                            <div class="dropdown">
+                                <a class="dropdown-item" href="doe.html">Doe</a>
+                                <a class="dropdown-item" href="meu_doe.html">Minhas doações</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="parceiros.html">Parceiros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre_nos.html">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+                <img  src="img/user.jpg" id="perfil">
+                <a class="navbar-brand ps-3" href="login.html" id="nome_login" >Login</a>
+                <div id="sair_login"></div>
+                
+                
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <form id="form">
+                <p>Conte mais sobre você!</p>
+                <div class="input-single">
+                    <input type="text" name="" id="name" class="input" placeholder="Nome Completo">
+                    <label for="name">Nome</label>
+                </div>
+
+                <div class="input-single">
+                    <input type="password" name="" id="password" class="input" placeholder="Senha" >
+                    <label for="password">Senha</label>
+                </div>
+
+                <div class="input-single">
+                    <input type="text" name="" id="cpf" class="input" placeholder="CPF">
+                    <label for="cpf">CPF</label>
+                </div>
+                
+                <div class="input-single">
+                    <input type="text" name="" id="data" class="input" placeholder="DD/MM/AA">
+                    <label for="data">Data de Nascimento</label>
+                </div>
+                
+                <div class="input-single">
+                    <input type="email" name="" id="email" class="input" placeholder="E-mail">
+                    <label for="email">E-mail</label>
+                </div>
+                
+                <div class="input-single">
+                    <input type="tel" name="" id="telefone" class="input" placeholder="Telefone">
+                    <label for="telefone">Telefone</label>
+                </div>
+
+
+                <div class="input-single">
+                    <input type="text" name="" id="cidade" class="input" placeholder="Cidade">
+                    <label for="cidade">Cidade</label>
+                </div>
+
+                <div class="input-single">
+                    <input type="text" name="" id="bairro" class="input" placeholder="Bairro">
+                    <label for="bairro">Bairro</label>
+                </div>
+
+            
+                <div class="input-single2">
+                    <input type="text" name="" id="Endereço" class="input" placeholder="Rua tal, 00">
+                    <label for="Endereço">Endereço</label>
+                </div>
+            
+                <div class="input-single3">
+                    <input type="text" name="" id="descriçao" class="input" placeholder="Descreva seu perfil e onde você mora">
+                    <label for="descriçao">Descrição</label>
+                </div>
+                
+                
+                
+                <div class="btn">
+                    <input type="submit" value="Criar" onclick="cadastro_user(event)">
+                </div>
+
+            </form>
+        </div>
+     
+        
+    
+   
+        <br>
+        <br>
+        <br>
+        
+    </main>
+    
+    <footer class="section footer-classic context-dark bg-image">
+        <div class="container py-1">
+            <div class="row row-30">
+                <div class="col-md-4 col-xl-6">
+                    <div class="pr-xl-4">
+                        <a class="brand" href="index.html">
+                            <img class="brand-logo-light" src="img/bege.png">
+                        </a>
+                        <p class="pt-4">Quatro patas até você: transformando lares em refúgios de amor!</p>
+                        <p class="rights">
+                            <span>© </span>
+                            <span class="copyright-year">2023</span>
+                            <span> </span>
+                            <span> </span>
+                            <span> </span>
+                            <span>All Rights Reserved.</span>
+                        </p>
+                        
+                    <h4>Redes Sociais</h4>
+                    <ul class="list-unstyled">
+                        <li style="list-style: none; display: inline-block; margin-right: 8px;"><a href="#" target="_blank"
+                                class="pl-10">
+                                <img src="img/instagram.png" alt="Facebook" width="20" height="20">
+                            </a></li>
+                        <li style="list-style: none; display: inline-block; margin-right: 8px;"><a
+                                href="#" target="_blank">
+                                <img src="img/linkedin.png" alt="LinkedIn" width="20" height="20" style="border-radius: 10%;">
+                            </a></li>
+                        <li style="list-style: none; display: inline-block;"><a href="#"
+                                target="_blank" class="pl-10">
+                                <img src="img/facebook.png" alt="Facebook" width="20" height="20">
+                            </a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contatos</h4>
+                    <dl class="contact-list">
+                        <dt>Endereço:</dt>
+                        <dd>Rua Walter Ianni, 255 - São Gabriel, Belo Horizonte - MG, 31980-110</dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dt>E-mail:</dt>
+                        <dd><a href="mailto:#">adoteumpet@gmail.com</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

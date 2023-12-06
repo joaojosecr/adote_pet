@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Pets</title>
+</head>
+
+<body onload="nome_login()">
+    <header >
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="img/bege.png" height="50px"></a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="adote.html">Adote</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Doe</a>
+                            <div class="dropdown">
+                                <a class="dropdown-item" href="doe.html">Doe</a>
+                                <a class="dropdown-item" href="meu_doe.html">Minhas doações</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="parceiros.html">Parceiros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre_nos.html">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+                <img  src="img/user.jpg" id="perfil">
+                <a class="navbar-brand ps-3" href="login.html" id="nome_login" >Login</a>
+                <div id="sair_login"></div>
+                
+                
+            </div>
+        </nav>
+    </header>
+    
+    <main class="center-form">
+            
+        <div class="form-container">
+            <form class="row g-3 needs-validation" id="formulario" novalidate>
+
+                <div class="col-md-6">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do Pet" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label" for="fotos">Fotos</label>
+                    <input type="file" class="form-control" id="fotos" name="fotos" required>
+
+                </div>
+
+                <div class="col-md-6">
+                    <label for="raca" class="form-label">Raça</label>
+                    <input type="text" class="form-control" id="raca" name="raca" placeholder="Raça" required>
+
+                </div>
+
+                <div class="col-md-6">
+                    <label for="aniversario" class="form-label">Aniversário</label>
+                    <input type="date" class="form-control" id="aniversario" name="aniversário" required>
+
+                </div>
+
+                <div class="col-md-12">
+                    <label for="gênero">Gênero:</label>
+
+                    <input type="radio" class="btn-check" id="macho" name="gênero" autocomplete="off">
+                    <label class="btn btn-light" for="macho">Macho</label>
+
+                    <input type="radio" class="btn-check" id="femea" name="gênero" autocomplete="off">
+                    <label class="btn btn-light" for="femea">Fêmea</label>
+                </div>
+
+                <div class="col-md-12">
+                    <label for="vacinado">Vacinado:</label>
+
+                    <input type="radio" class="btn-check" id="vacinadoSim" name="vacinado" autocomplete="off">
+                    <label class="btn btn-light" for="vacinadoSim">Sim</label>
+
+                    <input type="radio" class="btn-check" id="vacinadonao" name="vacinado" autocomplete="off">
+                    <label class="btn btn-light" for="vacinadonao">Não</label>
+                </div>
+
+                <div class="col-md-12">
+                    <label for="peso">Peso:</label>
+                    <input type="radio" class="btn-check" id="peso-1-5kg" name="peso" autocomplete="off">
+                    <label class="btn btn-light" for="peso-1-5kg">1-5Kg</label>
+
+                    <input type="radio" class="btn-check" id="peso-6-10kg" name="peso" autocomplete="off">
+                    <label class="btn btn-light" for="peso-6-10kg">6-10Kg</label>
+
+                    <input type="radio" class="btn-check" id="peso-11-15kg" name="peso" autocomplete="off">
+                    <label class="btn btn-light" for="peso-11-15kg">11-15Kg</label>
+
+                    <input type="radio" class="btn-check" id="peso-15kg" name="peso" autocomplete="off">
+                    <label class="btn btn-light" for="peso-15kg">+15Kg</label>
+                </div>
+
+                <div class="col-mb-3">
+                    <label for="descricao" class="form-label">Descrição:</label>
+                    <textarea class="form-control" id="descricao" name="descrição" rows="3"></textarea>
+                </div>
+
+                <div class="col-md-12">
+                    <button class="btn btn-light" onclick='cadastrar_pet(event)' id="doarButton">Cadastrar</button>
+                </div>
+
+            </form>
+        </div>
+    
+    </main>
+
+    <footer class="section footer-classic context-dark bg-image">
+        <div class="container py-1">
+            <div class="row row-30">
+                <div class="col-md-4 col-xl-6">
+                    <div class="pr-xl-4">
+                        <a class="brand" href="index.html">
+                            <img class="brand-logo-light" src="img/bege.png">
+                        </a>
+                        <p class="pt-4">Quatro patas até você: transformando lares em refúgios de amor!</p>
+                        <p class="rights">
+                            <span>© </span>
+                            <span class="copyright-year">2023</span>
+                            <span> </span>
+                            <span> </span>
+                            <span> </span>
+                            <span>All Rights Reserved.</span>
+                        </p>
+
+                        <h4>Redes Sociais</h4>
+                        <ul class="list-unstyled">
+                            <li style="list-style: none; display: inline-block; margin-right: 8px;"><a href="#"
+                                    target="_blank" class="pl-10">
+                                    <img src="img/instagram.png" alt="Facebook" width="20" height="20">
+                                </a></li>
+                            <li style="list-style: none; display: inline-block; margin-right: 8px;"><a href="#"
+                                    target="_blank">
+                                    <img src="img/linkedin.png" alt="LinkedIn" width="20" height="20"
+                                        style="border-radius: 10%;">
+                                </a></li>
+                            <li style="list-style: none; display: inline-block;"><a href="#" target="_blank"
+                                    class="pl-10">
+                                    <img src="img/facebook.png" alt="Facebook" width="20" height="20">
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contatos</h4>
+                    <dl class="contact-list">
+                        <dt>Endereço:</dt>
+                        <dd>Rua Walter Ianni, 255 - São Gabriel, Belo Horizonte - MG, 31980-110</dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dt>E-mail:</dt>
+                        <dd><a href="mailto:#">adoteumpet@gmail.com</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+</body>
+
+</html>
