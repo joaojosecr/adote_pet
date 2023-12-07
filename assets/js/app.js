@@ -327,7 +327,6 @@ function mostrar_interesse(id) {
     
 }
 
-
 function marcar_doado(id) {
     
     const url = "https://jsonserveradotepet--jjcribeiro.repl.co/pets/"+id
@@ -352,13 +351,12 @@ function marcar_doado(id) {
     
 }
 
-
 // ----------------- PARTE DANI -------------------    
 
 
 
 // Código LoginApp utilizado como exemplo para alunos de primeiro período 
-const LOGIN_URL = "index.html";
+const LOGIN_URL = "../../index.html";
 
 // Objeto para o banco de dados de usuários baseado em JSON
 var db_usuarios = { usuarios: [] };
@@ -651,8 +649,8 @@ function login2 (event){
                     })
                     .then(response => response.json())
                     .then(data => {
-                        window.location.href = 'index.html';
                         console.log('Dados enviados com sucesso:', data);
+                        window.location.href = '../../index.html';
                     })
                     .catch(error => {
                         console.error('Erro ao enviar dados:', error);
@@ -668,7 +666,6 @@ function login2 (event){
 
     return false;
   }
-
 
 // ----------- ADD PET --------------------
 
@@ -694,6 +691,8 @@ function cadastrar_pet(event) {
     
     peso ="1-5kg"
 
+    let invalido = 0;
+
     if (peso1Input.checked){
         const peso = "1-5Kg";
     } else if (peso2Input.checked) {
@@ -707,17 +706,9 @@ function cadastrar_pet(event) {
     }   
 
 
-    // "user_id": "1",
-    // "id": "0",
-    // "nome": "Petit",
-    // "raca": "Pinscher",
-    // "data": "15/02/2010",
-    // "genero": "macho",
-    // "vacinado": "sim",
-    // "peso": "5",
-    // "descricao": "descricao do animal",
-    // "foto": "img/pets/Petit"
+    
 
+    
 
     const url2 = "https://jsonserveradotepet--jjcribeiro.repl.co/login/0"
     fetch(url2)
@@ -726,60 +717,90 @@ function cadastrar_pet(event) {
         
         const userId = login.user_id;
 
-        alert(userId);
+        if(userId!=-1){
+            
+            if(nomeInput.value===""){
+                alert("Por favor, preencha o nome.");
+                invalido = 1;
+            } else if(racaInput.value===""){
+                alert("Por favor, preencha a raça.");
+                invalido = 1;
+            } else if(aniversarioInput.value===""){
+                alert("Por favor, preencha a data de nascimento");
+                invalido = 1;
+            } else if(generoMachoInput.value==false && generoFemeaInput.value == false){
+                alert("Por favor, selecione o gênero.");
+                invalido = 1;
+            } else if(vacinadoSimInput.value==false && vacinadoNaoInput.value == false){
+                alert("Por favor, informe sobre a vacinação.");
+                invalido = 1;
+            } else if(descricaoInput.value===""){
+                alert("Por favor, selecione o gênero.");
+                invalido = 1;
+            }
 
-        const pet = {
-            "user_id": userId,
-            "nome": nomeInput.value,
-            "raca": racaInput.value,
-            "data": aniversarioInput.value,
-            "genero": generoMachoInput.checked ? "Macho" : "Fêmea",
-            "vacinado": vacinadoSimInput.checked ? "Sim" : "Não",
-            "peso": peso,
-            "descricao": descricaoInput.value,
-            "foto": [
-                "https://i.ibb.co/Vvn5Ky6/1.png",
-                "https://i.ibb.co/2jq1Yyd/2.png",
-                "https://i.ibb.co/tMX23pX/3.png",
-                "https://i.ibb.co/0Q8FdWy/4.png",
-                "https://i.ibb.co/CnF0TQR/5.png",
-                "https://i.ibb.co/yW35Yc7/6.png",
-                "https://i.ibb.co/5xPh8d9/7.png",
-                "https://i.ibb.co/ykdQ66W/8.png",
-                "https://i.ibb.co/jfhXdV9/9.png",
-                "https://i.ibb.co/PDgwkRz/10.png",
-                "https://i.ibb.co/JpzwL9J/11.png",
-                "https://i.ibb.co/YWLWw4H/12.png",
-                "https://i.ibb.co/qrKpbDc/p.png",
-                "https://i.ibb.co/dj249jr/s.png",
-                "https://i.ibb.co/WHY2KjV/c.png"
-              ],
-            "doado": false
-        };
-    
-        // Restante do código permanece o mesmo
- 
-    
-        console.log(JSON.stringify(pet));
-        const url = "https://jsonserveradotepet--jjcribeiro.repl.co/pets"
-        fetch(url, {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(pet),
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Dados enviados com sucesso:', data);
-        })
-        .catch(error => {
-            console.error('Erro ao enviar dados:', error);
-        });         
-    
-    });
+            if (invalido == 0){
 
+                const pet = {
+                    "user_id": userId,
+                    "nome": nomeInput.value,
+                    "raca": racaInput.value,
+                    "data": aniversarioInput.value,
+                    "genero": generoMachoInput.checked ? "Macho" : "Fêmea",
+                    "vacinado": vacinadoSimInput.checked ? "Sim" : "Não",
+                    "peso": peso,
+                    "descricao": descricaoInput.value,
+                    "foto": [
+                        "https://i.ibb.co/Vvn5Ky6/1.png",
+                        "https://i.ibb.co/2jq1Yyd/2.png",
+                        "https://i.ibb.co/tMX23pX/3.png",
+                        "https://i.ibb.co/0Q8FdWy/4.png",
+                        "https://i.ibb.co/CnF0TQR/5.png",
+                        "https://i.ibb.co/yW35Yc7/6.png",
+                        "https://i.ibb.co/5xPh8d9/7.png",
+                        "https://i.ibb.co/ykdQ66W/8.png",
+                        "https://i.ibb.co/jfhXdV9/9.png",
+                        "https://i.ibb.co/PDgwkRz/10.png",
+                        "https://i.ibb.co/JpzwL9J/11.png",
+                        "https://i.ibb.co/YWLWw4H/12.png",
+                        "https://i.ibb.co/qrKpbDc/p.png",
+                        "https://i.ibb.co/dj249jr/s.png",
+                        "https://i.ibb.co/WHY2KjV/c.png"
+                    ],
+                    "doado": false
+                };
+            
+                // Restante do código permanece o mesmo
+        
+            
+                console.log(JSON.stringify(pet));
+                const url = "https://jsonserveradotepet--jjcribeiro.repl.co/pets"
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(pet),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Dados enviados com sucesso:', data);
+                    alert("Pet cadastrado com sucesso!");
+                    window.location.href = '../../index.html';
+                })
+                .catch(error => {
+                    console.error('Erro ao enviar dados:', error);
+                });         
+            
+            }
 
+        } else {
+
+            alert("Faça login para doar um Pet.");
+        }
+        });
+
+    
     
 }
 
@@ -805,8 +826,8 @@ function nome_login(){
                 
                 str= user.Nome.split(' ')[0]
                 document.querySelector('#nome_login').innerHTML=str
-                document.querySelector('#nome_login').setAttribute('href','index.html');
-                document.querySelector('#sair_login').innerHTML=`<a class="navbar-brand ps-3 " href="index.html" id="sair" onclick="sair_login(event)">Sair</a>`
+                document.querySelector('#nome_login').setAttribute('href','../../index.html');
+                document.querySelector('#sair_login').innerHTML=`<a class="navbar-brand ps-3 " href="../../index.html" id="sair" onclick="sair_login(event)">Sair</a>`
             
             });
         }
@@ -828,7 +849,7 @@ function sair_login(event){
         }),
         
     }).then(data => {
-                window.location.href = 'index.html';
+                window.location.href = '../../index.html';
                 console.log('Dados enviados com sucesso:', data);
             })
             .catch(error => {
